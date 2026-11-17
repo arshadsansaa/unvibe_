@@ -1,0 +1,25 @@
+# Copy to config.toml (git-ignored). API key comes from the ANTHROPIC_API_KEY environment variable.
+
+[goal]
+text = "Build AI agents from first principles, without frameworks"
+
+[feeds]
+# freeCodeCamp per-tag RSS: https://www.freecodecamp.org/news/tag/<slug>/rss/
+# Slugs below are guesses from tag names on the site. Open each URL once to confirm.
+base = "https://www.freecodecamp.org/news/tag/{slug}/rss/"
+slugs = ["ai-agents", "ai-agent", "agentic-ai", "mcp", "llm", "ai"]
+sync_hour = 6
+
+[llm]
+# Use a small, inexpensive model for triage, tagging and grading. Set the exact model name here.
+model = "<small-model-name>"
+max_retries = 2
+cache = true
+
+[paths]
+db = "~/.unvibe/unvibe.db"
+plans_dir = "docs/plans"
+
+[path]
+steps_per_week = 5
+change_only_at_week_start = true
